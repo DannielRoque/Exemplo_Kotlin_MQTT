@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/mqtt_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Conectado"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:background="#178888"
+        android:textStyle="bold"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/mqtt_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Adicione endereço broker"
+        app:layout_constraintTop_toBottomOf="@id/mqtt_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/mqtt_topic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Adicione o tópico"
+        app:layout_constraintTop_toBottomOf="@id/mqtt_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/mqtt_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Insira a mensagem"
+        app:layout_constraintTop_toBottomOf="@id/mqtt_topic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/mqtt_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        app:layout_constraintTop_toBottomOf="@id/mqtt_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="#cece"/>
+
+    <Button
+        android:id="@+id/mqtt_connect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Conectar"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/mqtt_send"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="#1A602E"/>
+    
+    <EditText
+        android:id="@+id/mqtt_history"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mqtt_connect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+<!--
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mqtt_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/mqtt_connect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
